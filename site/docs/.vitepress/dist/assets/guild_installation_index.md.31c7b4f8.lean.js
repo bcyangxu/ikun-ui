@@ -1,0 +1,1 @@
+import{_ as a,c as s,o as e,e as n}from"./app.744e7255.js";const C=JSON.parse('{"title":"安装","description":"","frontmatter":{},"headers":[],"relativePath":"guild/installation/index.md"}'),t={name:"guild/installation/index.md"},l=n("",3),o=[l];function p(i,c,r,d,_,h){return e(),s("div",null,o)}const m=a(t,[["render",p]]);export{C as __pageData,m as default};

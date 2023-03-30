@@ -10,7 +10,7 @@ export default defineConfig({
         //minify: false,
         rollupOptions:{
             //忽略打包vue文件
-            external: ["vue"],
+            external: ["vue",/\.less/],
             input: ["index.ts"],
              output:[
               {
@@ -45,5 +45,21 @@ export default defineConfig({
             tsConfigFilePath: "../../tsconfig.json",
         }),
         DefineOptions(),
+        {
+            name:"style",
+            generateBundle(config,bundle) {
+                const keys = Object.keys(bundle);
+
+                for(const key of keys) {
+                    const bundler: any = bundle[key as any];
+
+                    this.emitFile({
+                        type:"asset",
+                        fileName:key,
+                        source: bundler.code.replace(/\.less/g,".css"),
+                    });
+                }
+            },
+        },
     ],
 });
