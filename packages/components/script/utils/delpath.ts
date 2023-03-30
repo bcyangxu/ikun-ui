@@ -24,7 +24,7 @@ const delPath = async (path:string) => {
                  }
             }
         });
-        if(path != `${pkgPath}/xu-ui`) fs.rmdirSync(path);
+        if(path != `${pkgPath}/ikun-ui`) fs.rmdirSync(path);
     }
 }
 

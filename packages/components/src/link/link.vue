@@ -8,14 +8,14 @@
     import "./style/index.less";
     import { computed } from 'vue';
     // 自定义组件名称
-    defineOptions({ name : "xu-link"});
+    defineOptions({ name : "ik-link"});
     type LinkProps = {
         type?: string;
     };
     const  LinkProps = defineProps<LinkProps>();
 
     const linkStyle = computed(() => {
-        return { [`xu-link--${LinkProps.type}`]: LinkProps.type
+        return { [`ik-link--${LinkProps.type}`]: LinkProps.type
         };
 
     });

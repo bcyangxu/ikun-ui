@@ -18,7 +18,7 @@ export default defineConfig({
                 entryFileNames: "[name].mjs",
                 preserveModules: true,
                 exports: "named",
-                dir: "../xu-ui/es",
+                dir: "../ikun-ui/es",
               },
               {
                 //打包格式
@@ -29,7 +29,7 @@ export default defineConfig({
                 preserveModules: true,
                 exports: "named",
                 //配置打包根目录
-                dir: "../xu-ui/lib",
+                dir: "../ikun-ui/lib",
               },
             ],
         },
@@ -41,7 +41,7 @@ export default defineConfig({
         vue(),
         dts({
             entryRoot: "./src",
-            outputDir: ["../xu-ui/es/src","../xu-ui/lib/src"],
+            outputDir: ["../ikun-ui/es/src","../ikun-ui/lib/src"],
             tsConfigFilePath: "../../tsconfig.json",
         }),
         DefineOptions(),
